@@ -1,0 +1,26 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*************************************************************************************************************** admin_layout */
+.admin_page{
+
+}
+
+	.admin_page .nav_main ul:after,
+	.admin_page .nav_main .mail_link{
+		display: none;
+	}
+
+	.admin_page .nav_main ul{
+		background: red;
+	}
+
+	.admin_page .wrap .header_inner .nav_main{
+		padding-right: 0;
+		background: red;
+	}
+
+	.admin_page .wrap .content_inner{
+		padding-top: 50px;
+	}

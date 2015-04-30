@@ -1,4 +1,5 @@
 Testpager::Application.routes.draw do
+  get "admin/index"
   resources :news, only: [:index, :show]
 
   resources :documents, only: [:index, :show]
@@ -6,6 +7,7 @@ Testpager::Application.routes.draw do
   get "contacts/index"
   get "services/index"
   get "index/index"
+  get "admin/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

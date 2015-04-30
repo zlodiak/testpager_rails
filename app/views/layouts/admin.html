@@ -4,14 +4,14 @@
 	<head>
 		<meta charset="utf-8" />
 		
-		<title>Test</title>	
+		<title>Test - admin panel</title>	
 		
 		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 		<%= csrf_meta_tags %>		
 	</head>
 	
-	<body class="common_page">		
+	<body class="admin_page">		
 		<div class="wrap">				
 			<header class="header">
 				<div class="header_inner width1100">
@@ -20,19 +20,15 @@
 					<a class="logo" href="/">
 						<%= image_tag "images/logo.jpg", class: "logo_pic", size: "350x170", alt: "Test logo" %>
 					</a>
-					
+
 					<%= render 'shared/nav_top' %>	
 
 					<%= render 'shared/nav_main' %>	
-
-					<%= render 'shared/slider_head' %>	
 				</div>
 			</header>
 			
 			<div class="content">
 				<div class="content_inner width1100 clearfix">
-					<%= yield :offers %>	
-					
 					<div class="main content_format">
 						<%= yield %>
 					</div>
@@ -42,12 +38,6 @@
 			<div class="footer_correct"></div>
 		</div>
 		
-		<%= render 'shared/footer' %>			
-
-		<script>
-			$( document ).ready(function() {
-				$('#slider').nivoSlider();
-			});
-		</script>					
+		<%= render 'shared/footer' %>								
 	</body>
 </html>

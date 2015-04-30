@@ -187,6 +187,7 @@ input:-moz-placeholder {
 			
 			.wrap .content_inner .main{
 				width: 100%;
+				min-height: 500px;
 			}
 						
 			.layout_right_sidebar .wrap .content_inner .main{
