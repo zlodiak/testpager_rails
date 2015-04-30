@@ -4,7 +4,7 @@ class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index
-    @news = News.all
+    @news = News.all.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /news/1

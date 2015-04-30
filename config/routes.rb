@@ -1,7 +1,7 @@
 Testpager::Application.routes.draw do
-  resources :news
+  resources :news, only: [:index, :show]
 
-  resources :documents
+  resources :documents, only: [:index, :show]
 
   get "contacts/index"
   get "services/index"

@@ -6,15 +6,17 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @documents.each do |document| %>
       <tr>
+        <td><%= document.title %></td>
+        <td><%= truncate(document.body, length: 300) %></td>
         <td><%= link_to 'Show', document %></td>
-        <td><%= link_to 'Edit', edit_document_path(document) %></td>
-        <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +24,6 @@
 
 <br>
 
-<%= link_to 'New Document', new_document_path %>
+<%= will_paginate %>
+
+

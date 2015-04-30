@@ -4,12 +4,13 @@ class DocumentsController < ApplicationController
   # GET /documents
   # GET /documents.json
   def index
-    @documents = Document.all
+    @documents = Document.all.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /documents/1
   # GET /documents/1.json
   def show
+    #@document = Document.find(params[:id])
   end
 
   # GET /documents/new
