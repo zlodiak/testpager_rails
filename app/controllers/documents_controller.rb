@@ -7,6 +7,11 @@ class DocumentsController < ApplicationController
     @documents = Document.all.paginate(page: params[:page], per_page: 10)
   end
 
+  def admin_index
+    @documents = Document.all.paginate(page: params[:page], per_page: 10)
+    render layout: "admin" 
+  end  
+
   # GET /documents/1
   # GET /documents/1.json
   def show
