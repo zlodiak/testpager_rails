@@ -1,5 +1,5 @@
 class DocumentsController < ApplicationController
-  before_action :set_document, only: [:show, :edit, :update, :destroy]
+  before_action :set_document, only: [:show, :admin_show, :edit, :update, :destroy]
 
   # GET /documents
   # GET /documents.json
@@ -17,6 +17,11 @@ class DocumentsController < ApplicationController
   def show
     #@document = Document.find(params[:id])
   end
+
+  def admin_show
+    #@document = Document.find(params[:id])
+    render layout: "admin" 
+  end  
 
   # GET /documents/new
   def new
