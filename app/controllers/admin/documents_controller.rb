@@ -1,7 +1,7 @@
 class Admin::DocumentsController < ApplicationController
   before_action :set_document, only: [:show, :edit, :update, :destroy]
 
-  #layout 'admin'
+  layout 'admin/admin'
 
   def index
     #@documents = Document.all.paginate(page: params[:page], per_page: 10)
