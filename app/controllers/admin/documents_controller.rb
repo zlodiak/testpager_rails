@@ -1,17 +1,18 @@
-class DocumentsController < ApplicationController
+class Admin::DocumentsController < ApplicationController
   before_action :set_document, only: [:show, :edit, :update, :destroy]
 
-  # GET /documents
-  # GET /documents.json
-  def index
-    @documents = Document.all.paginate(page: params[:page], per_page: 10)
-  end
+  #layout 'admin'
 
-  # GET /documents/1
-  # GET /documents/1.json
+  def index
+    #@documents = Document.all.paginate(page: params[:page], per_page: 10)
+    #render layout: "admin" 
+    #render :text => 'whatever'
+  end  
+
   def show
     #@document = Document.find(params[:id])
-  end
+    #render layout: "admin" 
+  end  
 
   # GET /documents/new
   def new

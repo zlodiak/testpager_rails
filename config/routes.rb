@@ -4,12 +4,17 @@ Testpager::Application.routes.draw do
 
   resources :documents, only: [:index, :show, :destroy]
 
+  namespace :admin do
+    resources :documents, only: [:index, :show, :destroy]
+    #get "admin" => 'documents#index'
+  end
+
   get "contacts/index"
   get "services/index"
   get "index/index"
   get "admin/index"
-  get "admin/documents" => 'documents#admin_index'
-  get "admin/documents/:id" => 'documents#admin_show', as: 'admin_document'
+  
+  #get "admin/documents/:id" => 'documents#admin_show', as: 'admin_document'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
