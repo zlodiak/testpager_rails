@@ -6,7 +6,7 @@ Testpager::Application.routes.draw do
 
   namespace :admin do
     resources :documents, only: [:index, :show, :destroy]
-    #get "admin" => 'documents#index'
+    get "admin" => 'documents#index'
   end
 
   get "contacts/index"
