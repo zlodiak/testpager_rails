@@ -18,7 +18,7 @@
         <td><%= truncate(document.body, length: 300) %></td>
         <td><%#= link_to 'Edit', edit_document_path(document) %></td>
         <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>        
-        <td><%= link_to 'Show', document %></td>
+        <td><%= link_to 'Show', admin_document_path(document) %></td>
       </tr>
     <% end %>
   </tbody>

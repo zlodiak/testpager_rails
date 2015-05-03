@@ -19,6 +19,7 @@ class DocumentsController < ApplicationController
   end
 
   def admin_show
+    p params[:id]
     #@document = Document.find(params[:id])
     render layout: "admin" 
   end  

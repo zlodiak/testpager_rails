@@ -9,7 +9,7 @@ Testpager::Application.routes.draw do
   get "index/index"
   get "admin/index"
   get "admin/documents" => 'documents#admin_index'
-  get "admin/documents/:id" => 'documents#admin_show'
+  get "admin/documents/:id" => 'documents#admin_show', as: 'admin_document'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
