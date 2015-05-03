@@ -4,14 +4,11 @@ class Admin::DocumentsController < ApplicationController
   layout 'admin/admin'
 
   def index
-    #@documents = Document.all.paginate(page: params[:page], per_page: 10)
-    #render layout: "admin" 
-    #render :text => 'whatever'
+    @documents = Document.all.paginate(page: params[:page], per_page: 10)
   end  
 
   def show
-    #@document = Document.find(params[:id])
-    #render layout: "admin" 
+    @document = Document.find(params[:id])
   end  
 
   # GET /documents/new
