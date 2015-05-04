@@ -1,7 +1,6 @@
 Testpager::Application.routes.draw do
-  resources :news, only: [:index, :show]
-
-  resources :documents, only: [:index, :show, :destroy]
+  resources :news,      only: [:index, :show]
+  resources :documents, only: [:index, :show]
 
   namespace :admin do
     resources :documents, only: [:index, :show, :destroy, :edit, :update, :new, :create]
