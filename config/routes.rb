@@ -1,11 +1,11 @@
 Testpager::Application.routes.draw do
-  get "admin/index"
   resources :news, only: [:index, :show]
 
   resources :documents, only: [:index, :show, :destroy]
 
   namespace :admin do
-    resources :documents, only: [:index, :show, :destroy]
+    resources :documents, only: [:index, :show, :destroy, :edit, :update, :new, :create]
+    resources :news,      only: [:index, :show, :destroy, :edit, :update, :new, :create]
     get "admin" => 'documents#index'
   end
 

@@ -17,6 +17,8 @@
         <td><%= document.title %></td>
         <td><%= truncate(document.body, length: 300) %></td>
         <td><%= link_to 'Show', admin_document_path(document) %></td>
+        <td><%= link_to 'Edit', edit_admin_document_path(document) %></td>
+        <td><%= link_to 'Destroy', admin_document_path(document), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,5 +27,9 @@
 <br>
 
 <%= will_paginate %>
+
+<br>
+
+<%= link_to 'New Document', new_admin_document_path %>
 
 
