@@ -218,6 +218,22 @@ input:-moz-placeholder {
 	}
 
 
+/*************************************************************************************************************** GLOBAL_blocks : auth_area */
+.auth_area{
+	color: #fff;
+
+	float: left;
+	width: 300px;
+}
+
+	.auth_area_inner{
+		padding: 18px 25px 10px;
+	}
+
+		.auth_area .auth_area_inner a{
+			color: #898989;
+		}
+
 /*************************************************************************************************************** GLOBAL_blocks : pagination */
 div#paginate{
   width:100%;
@@ -460,12 +476,14 @@ span.first_page, span.last_page{
 
 /*************************************************************************************************************** GLOBAL_blocks : nav_top */
 .nav_top{
-
+	overflow: hidden;
 }
 
 	.nav_top ul{
 		text-align: right;
 		min-height: 65px;
+		float: right;
+		width: 400px;
 	}
 	
 		.nav_top ul li{

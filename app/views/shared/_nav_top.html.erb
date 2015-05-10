@@ -1,7 +1,18 @@
 <nav class="nav_top">
 	<h2 class="h2 hide">Навигация верхняя</h2>
 
+	<div class="auth_area">
+		<div class="auth_area_inner">
+			<span class="notice"><%= notice %></span>	<span class="alert"><%= alert %></span>	
 
+			<% if user_signed_in? %>
+			    <span>Здравствуйте, <%= current_user.email %></span>
+			    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+			<% else %>
+			    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+			<% end %>
+		</div>
+	</div>
 
 	<ul id="menu">  
 	    <li>
