@@ -1,5 +1,4 @@
 Testpager::Application.routes.draw do
-  devise_for :users
   resources :news,      only: [:index, :show]
   resources :documents, only: [:index, :show]
 

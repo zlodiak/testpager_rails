@@ -39,8 +39,6 @@ end
 
 gem 'will_paginate'
 
-gem 'devise'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
