@@ -1,4 +1,5 @@
 Testpager::Application.routes.draw do
+  get "persons/profile"
   devise_for :users
   resources :news,      only: [:index, :show]
   resources :documents, only: [:index, :show]
@@ -13,6 +14,7 @@ Testpager::Application.routes.draw do
   get "services/index"
   get "index/index"
   get "admin/index"
+  get 'persons/profile', as: 'user_root'
   
   #get "admin/documents/:id" => 'documents#admin_show', as: 'admin_document'
   # The priority is based upon order of creation: first created -> highest priority.

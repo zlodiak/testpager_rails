@@ -1,5 +1,6 @@
 class Admin::NewsController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
   layout 'admin/admin'
