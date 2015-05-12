@@ -1,4 +1,5 @@
 Testpager::Application.routes.draw do
+  resources :sessions,  only: [:new,  :create,  :destroy]
   resources :users
   resources :news,      only: [:index, :show]
   resources :documents, only: [:index, :show]
@@ -13,6 +14,10 @@ Testpager::Application.routes.draw do
   get "services/index"
   get "index/index"
   get "admin/index"
+
+  match '/signup',    to: 'users#new',                        via:  'get'
+  match '/signin',    to: 'sessions#new',                 via:  'get'
+  match '/signout', to: 'sessions#destroy',         via:  'delete'  
 
   #match '/signup',    to: 'users#new',                        via:  'get'
   
