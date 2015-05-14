@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
 	def	new
+    #render :text => "<ul>туц</ul>".html_safe
 	end
 
 	def	create

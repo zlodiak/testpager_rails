@@ -16,8 +16,8 @@ Testpager::Application.routes.draw do
   get "admin/index"
 
   match '/signup',    to: 'users#new',                        via:  'get'
-  #match '/signin',    to: 'sessions#new',                 via:  'get'
-  #match '/signout', to: 'sessions#destroy',         via:  'delete'  
+  match '/signin',    to: 'sessions#new',                 via:  'get'
+  match '/signout', to: 'sessions#destroy',         via:  'delete'  
 
   #match '/signup',    to: 'users#new',                        via:  'get'
   

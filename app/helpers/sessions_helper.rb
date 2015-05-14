@@ -12,7 +12,16 @@ module	SessionsHelper
 
   def current_user
     remember_token  = User.encrypt(cookies[:remember_token])
+    p 333
+    p remember_token
+    p 123
     @current_user ||= User.find_by(remember_token:  remember_token)
+    if @current_user
+      print 'Variable is 10'
+    else
+      print 'Variable is something else'
+    end
+    p 123
   end  
 
   def signed_in?
