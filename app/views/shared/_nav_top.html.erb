@@ -4,7 +4,7 @@
 	<div class="auth_area">
 		<div class="auth_area_inner">
 			<% if signed_in? %>
-				<%#=	link_to	"Profile", current_user %>
+				<%=	link_to	"Profile", current_user %>
 				<%=	link_to	"Sign out", signout_path, method: "delete" %>
 			<% else %>
 				<%=	link_to	"Sign in", signin_path %>
