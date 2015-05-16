@@ -20,5 +20,13 @@
 	    <li>
 	    	<%= link_to 'to public', documents_path %>
 	    </li>  	    
-	</ul>  	
+	</ul>
+
+	<strong> 
+		<% if current_user %>
+			<%= current_user.name %>
+		<% else %>
+			no current user no
+		<% end %>
+	</strong>
 </nav>
