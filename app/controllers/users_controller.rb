@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user,  only: [:edit, :update]
+  before_action :signed_in_user,  only: [:index, :edit, :update]
   before_action :correct_user
 
 	def index 
-		@user	=	User.all
+		@users	=	User.all
 	end
 
 	def	show
@@ -54,7 +54,9 @@ class UsersController < ApplicationController
     end
 
     def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      if @user 
+        @user = User.find(params[:id])
+        redirect_to(root_url) unless current_user?(@user)
+      end
     end
 end
