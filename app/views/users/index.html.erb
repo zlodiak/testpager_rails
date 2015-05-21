@@ -6,6 +6,7 @@
     <li>
       <%= gravatar_for user %>
       <%= link_to user.name, user %>
+      <%= link_to 'delete', user, method: :delete, data: {confirm: 'sure?'} %>
     </li>
   <% end %>
 </ul>
