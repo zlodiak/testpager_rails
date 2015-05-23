@@ -2,6 +2,8 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
 
+  fixtures :users
+
 	test "should not save user without name" do
     user = User.create(  :name => '',
                 :email => 'xx@ad.ad',
