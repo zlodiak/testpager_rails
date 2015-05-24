@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
 	
   def index
-  	render layout: "admin"
+  	render layout: "admin/admin"
   end
   
 end
