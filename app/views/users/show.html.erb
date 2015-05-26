@@ -9,8 +9,14 @@
 <div class="m_posts">
 	<% if @user.microposts.any? %>
 		<h3>microposts: <%= @user.microposts.count %></h3>
+		
 		<ol class="microposts">
-			<%= render @microposts %>
+			<% @user.microposts.each do |micropost| %>
+				<li id="micropost-<%= micropost.id %>">
+					<span class="user"><%= link_to micropost.user.name, micropost.user %></span>
+					<div><%= micropost.content %></div>
+				</li>
+			<% end %>
 		</ol>
 
 		<%= will_paginate @microposts %>
